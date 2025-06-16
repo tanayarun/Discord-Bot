@@ -41,5 +41,4 @@ func ReadConfig() error {
 	BotPrefix = config.BotPrefix
 
 	return nil
-
 }
