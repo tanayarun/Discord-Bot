@@ -11,7 +11,7 @@ var BotID string
 var goBot *discordgo.Session
 
 func Start() {
-	goBot, err := discordgo.New("Bot" + config.Token)
+	goBot, err := discordgo.New("Bot " + config.Token)
 
 	if err != nil {
 		fmt.Println(err.Error())
@@ -43,6 +43,6 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	}
 
 	if m.Content == "ping" {
-		_, _ = s.ChannelMessageSend(m.ChannelID, "ping")
+		_, _ = s.ChannelMessageSend(m.ChannelID, "pong")
 	}
 }
